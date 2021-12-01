@@ -1,0 +1,52 @@
+
+<%- include('partials/header.ejs') %>
+
+<body>
+
+<%- include('partials/homenavbar.ejs') %>
+
+<div class="container">
+
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-4">Seja bem-vindo ao @blogui!</h1>
+        <p class="lead">Este é um simples blog</p>
+        <hr class="my-4">
+        <p>Poste suas dúvidas, o que você sabe e ajude todo mundo.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Leia mais</a>
+      </div>
+
+    <% articles.forEach(article =>{ %>
+
+        <div class="card">
+            <div class="card-header">
+                <%- article.title %>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-success" href="/<%-article.slug%>">Ler artigo</a>
+            </div>
+        </div>
+        <br>
+
+
+
+    <% }) %>
+
+    <div class="row">
+        <div class="col col-12">
+            <a style="float: right;" href="/articles/page/2">Next >>>></a>
+        </div>
+    </div>
+    
+    
+    
+</div>
+    
+
+
+
+
+
+</body>
+
+<%- include('partials/footer.ejs') %>
